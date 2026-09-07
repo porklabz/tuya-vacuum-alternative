@@ -18,10 +18,10 @@ pip install "tuya-vacuum @ git+https://github.com/porklabz/tuya-vacuum-alternati
 
 ## Usage
 ```python
-from tuya_vacuum import TuyaVacuum
+from tuya_vacuum import Vacuum
 
-# Create a new TuyaVacuum instance
-vacuum = TuyaVacuum(
+# Create a new Vacuum instance
+vacuum = Vacuum(
     origin="https://openapi.tuyaus.com",
     client_id="<Client ID>",
     client_secret="<Client Secret>",
