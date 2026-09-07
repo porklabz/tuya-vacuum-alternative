@@ -29,7 +29,7 @@ vacuum = Vacuum(
 )
 
 # Parse the map data
-vacuum_map = vacuum.fetch_realtime_map()
+vacuum_map = vacuum.fetch_map()
 
 # Save the map as an image
 image = vacuum_map.to_image()
