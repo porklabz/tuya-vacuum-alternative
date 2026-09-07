@@ -51,8 +51,10 @@ trabalho locais já existem:
   merges no upstream, linka o repositório original e o PR #7
   (`jaidenlabelle/tuya-vacuum#7`), e mantém as instruções de uso/instalação
   da lib (`pip install`) ajustadas para o novo pacote/origem.
-- Após o primeiro commit, cria a tag `v0.1.8-1` (versão upstream + sufixo
-  de patch do fork) — é essa tag que o addon vai referenciar.
+- Após o primeiro commit, cria a tag `v0.1.9-1` (a versão upstream atual,
+  conforme `pyproject.toml`, é `0.1.9` — não `0.1.8` como o `manifest.json`
+  do addon original ainda referencia — + sufixo de patch do fork) — é essa
+  tag que o addon vai referenciar.
 
 ### 2. `porklabz/tuya-vacuum-maps` — fork do addon HACS
 
@@ -69,7 +71,7 @@ trabalho locais já existem:
     fork lado a lado com a integração original, sem migração forçada de
     quem já usa o addon original.
 - `manifest.json`: `requirements` passa a ser
-  `["tuya-vacuum @ git+https://github.com/porklabz/tuya-vacuum-alternative.git@v0.1.8-1"]`.
+  `["tuya-vacuum @ git+https://github.com/porklabz/tuya-vacuum-alternative.git@v0.1.9-1"]`.
 - `hacs.json`: atualiza `name` para refletir o fork (ex: "Tuya Vacuum Maps
   Alternative"); mantém `country`.
 - README reescrito: explica o motivo do fork, créditos ao projeto
@@ -101,7 +103,7 @@ trabalho locais já existem:
 ## Passos de rollout
 
 1. Portar `tuya-vacuum-alternative` (lib): clone, aplica fix do CI,
-   ajusta README/LICENSE, commit, tag `v0.1.8-1`, push.
+   ajusta README/LICENSE, commit, tag `v0.1.9-1`, push.
 2. Portar `tuya-vacuum-maps` (addon): clone, renomeia domain em todos os
    arquivos, ajusta `manifest.json`/`hacs.json`/README, commit, push.
    Depende do passo 1 estar publicado (tag precisa existir no GitHub
