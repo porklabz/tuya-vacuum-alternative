@@ -1,11 +1,19 @@
-# tuya-vacuum
+# tuya-vacuum (porklabz fork)
+
+> **Este é um fork mantido de [jaidenlabelle/tuya-vacuum](https://github.com/jaidenlabelle/tuya-vacuum).**
+> O mantenedor original não está fazendo merge de Pull Requests há vários meses.
+> Este fork aplica [jaidenlabelle/tuya-vacuum#7](https://github.com/jaidenlabelle/tuya-vacuum/pull/7)
+> (fix de CI) e outras correções pendentes, para manter a lib instalável e a
+> integração [tuya-vacuum-maps](https://github.com/porklabz/tuya-vacuum-maps)
+> funcionando.
+
 tuya-vacuum is a python library to view maps from Tuya robot vacuums.
 
 ## Installation
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install tuya-vacuum.
+Instale direto deste fork via pip + git:
 
 ```bash
-pip install tuya-vacuum
+pip install "tuya-vacuum @ git+https://github.com/porklabz/tuya-vacuum-alternative.git@v0.1.9-1"
 ```
 
 ## Usage
@@ -30,7 +38,7 @@ image.save("output.png")
 
 ## Compatability List
 
-This is a list of all currently tested devices. Create a new [issue](https://github.com/jaidenlab/tuya-vacuum/issues) to add your device.
+This is a list of all currently tested devices. Create a new [issue](https://github.com/porklabz/tuya-vacuum-alternative/issues) to add your device.
 
 | Device                                                | Support                           |
 | ----------------------------------------------------- | --------------------------------- |
@@ -38,4 +46,5 @@ This is a list of all currently tested devices. Create a new [issue](https://git
 | Kabum Robô Aspirador de Pó 700                        | <text style="color:lightgreen">Supported</text> |
 
 ## Special Thanks
+- [Jaiden Labelle](https://github.com/jaidenlabelle) for the original `tuya-vacuum` library
 - [Tuya Cloud Vacuum Map Extractor](https://github.com/oven-lab/tuya_cloud_map_extractor) by [@oven-lab](https://github.com/oven-lab)
