@@ -5,6 +5,11 @@ on: push
 jobs:
   build:
     name: Build distribution
+    # DISABLED: This workflow is inherited from upstream and attempts to publish to
+    # the original tuya-vacuum PyPI/TestPyPI projects. This fork does not have the
+    # necessary OIDC trusted publishing credentials, and publishing to PyPI is out
+    # of scope for this project. Kept as historical reference only.
+    if: false
     runs-on: ubuntu-latest
 
     steps:
@@ -28,8 +33,11 @@ jobs:
 
   publish-to-pypi:
     name: Publish distribution to PyPI
-    # Only publish to PyPI on tag pushes
-    if: startsWith(github.ref, 'refs/tags/')
+    # DISABLED: This workflow is inherited from upstream and attempts to publish to
+    # the original tuya-vacuum PyPI project. This fork does not have the necessary
+    # OIDC trusted publishing credentials, and publishing to PyPI is out of scope
+    # for this project. Kept as historical reference only.
+    if: false
     needs:
       - build
     runs-on: ubuntu-latest
@@ -51,6 +59,10 @@ jobs:
   # Upload the signed packages to GitHub Release.
   github-release:
     name: Sign and upload to GitHub Release
+    # DISABLED: This workflow is inherited from upstream and depends on publish-to-pypi.
+    # Since publish-to-pypi is disabled, this job is also disabled. Kept as historical
+    # reference only.
+    if: false
     needs:
       - publish-to-pypi
     runs-on: ubuntu-latest
@@ -93,6 +105,11 @@ jobs:
 
   publish-to-testpypi:
     name: Publish distribution to TestPyPI
+    # DISABLED: This workflow is inherited from upstream and attempts to publish to
+    # the original tuya-vacuum TestPyPI project. This fork does not have the necessary
+    # OIDC trusted publishing credentials, and publishing to PyPI is out of scope
+    # for this project. Kept as historical reference only.
+    if: false
     needs:
       - build
     runs-on: ubuntu-latest
