@@ -13,7 +13,7 @@ tuya-vacuum is a python library to view maps from Tuya robot vacuums.
 Instale direto deste fork via pip + git:
 
 ```bash
-pip install "tuya-vacuum @ git+https://github.com/porklabz/tuya-vacuum-alternative.git@v0.1.9-1"
+pip install "tuya-vacuum@git+https://github.com/porklabz/tuya-vacuum-alternative.git@v0.1.9-1"
 ```
 
 ## Usage
