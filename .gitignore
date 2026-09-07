@@ -1,0 +1,14 @@
+.env
+__pycache__
+.pytest_cache
+venv
+.coverage
+
+# Distribution archives
+dist
+
+# Hide files made while manually testing
+layout.bin
+path.bin
+combined.png
+map.png
